@@ -1,0 +1,9 @@
+<%= link_to "New Image", new_image_url, class: "btn btn-primary pull-right" %>
+<div class="row container-main">
+  <% @images.each do |image| %>
+    <p class="text-center"><%= image_tag image.img_url, size: "350x450" %>
+    </p>
+    <center><span class="label-1"><%= image.created_at %></span></center>
+    <center><span class="label-1"><%= link_to image.title, "/images/#{image.id}" %></span></center>
+  <% end %>
+</div>

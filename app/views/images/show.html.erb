@@ -1,0 +1,8 @@
+<div class="row container-main">
+    <p class="text-center"><%= image_tag @image.img_url, size: "350x450" %>
+    </p>
+    <center><span class="label-1"><%= @image.created_at %></span></center>
+
+	<%= link_to 'Edit', edit_image_path(@image) %> |
+	<%= link_to 'Back', images_path %>
+</div>
